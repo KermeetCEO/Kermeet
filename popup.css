@@ -66,14 +66,12 @@ textarea {
 .phone-container {
   width: 100%;
   display: flex;
-  justify-content: space-between; /* Spread items horizontally */
   align-items: center;
   margin-bottom: 20px;
 }
 
-#countryCodeSelect,
-#phoneNumberInput {
-  flex: 1; /* Distribute available space equally */
+#countryCodeSelect {
+  margin-right: 20px; /* Adjust the margin as needed */
 }
 
 
