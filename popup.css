@@ -70,6 +70,19 @@ textarea {
   margin-bottom: 20px;
 }
 
+#countryCodeSelect,
+#phoneNumberInput {
+  height: 40px; /* Adjust the height to your preference */
+}
+
+#phoneNumberInput {
+  box-sizing: border-box;
+}
+
+.message-container {
+  box-sizing: border-box;
+}
+
 select,
 input[type="text"] {
   flex-grow: 1;
