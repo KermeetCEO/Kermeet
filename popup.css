@@ -66,9 +66,14 @@ textarea {
 .phone-container {
   width: 100%;
   display: flex;
+  justify-content: space-between; /* Spread items horizontally */
   align-items: center;
-  justify-content: flex-end; /* Align items to the right */
   margin-bottom: 20px;
+}
+
+#countryCodeSelect,
+#phoneNumberInput {
+  flex: 1; /* Distribute available space equally */
 }
 
 
