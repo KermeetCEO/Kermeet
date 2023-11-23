@@ -64,29 +64,30 @@ textarea {
 }
 
 .phone-container {
-  width: 100%;
+  width: 351px;
+  height: 40px;
+  margin-left: 20px;
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
 
 #countryCodeSelect {
-  margin-right: 20px; /* Adjust the margin as needed */
-}
-
-
-#countryCodeSelect,
-#phoneNumberInput {
-  height: 40px; /* Adjust the height to your preference */
+  height: 40px; /* Set the same height as #phoneNumberInput */
+  margin-right: 10px; /* Adjust the margin as needed */
 }
 
 #phoneNumberInput {
-  box-sizing: border-box;
+  width: 250px; /* Increase the width as needed */
+  height: 40px; /* Keep the same height */
+  padding: 10px; /* Add padding as needed */
+  box-sizing: border-box; /* Include padding and border in the total width */
+  border: 1px solid #1a1a1a; /* Add border style */
+  border-radius: 0px; /* Adjust border-radius as needed */
+  margin-left: auto; /* Push it to the right */
 }
 
-.message-container {
-  box-sizing: border-box;
-}
+
 
 select,
 input[type="text"] {
