@@ -1,4 +1,3 @@
-/* Ajoutez ces styles à votre fichier popup.css */
 body {
   font-family: 'Arial', 'Arial', 'Arial' ;
 }
@@ -20,8 +19,7 @@ body {
 
 .title-container {
   display: flex;
-  align-items: center
-  ;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -53,6 +51,10 @@ img {
   margin-bottom: 10px;
 }
 
+.message-container textarea:focus::placeholder {
+  color: transparent;
+}
+
 textarea {
   width: 100%;
   padding: 10px;
@@ -65,12 +67,20 @@ textarea {
 }
 
 .phone-container {
-  width: 351px;
+  width: 352px;
   height: 40px;
-  margin-left: 20px;
+  margin-left: 21px;
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+}
+
+.phone-container textarea:focus::placeholder {
+  color: transparent;
+}
+
+.phone-container input[type="text"]:focus::placeholder {
+  color: transparent;
 }
 
 #countryCodeSelect {
@@ -146,4 +156,3 @@ button:hover {
 button:hover::before {
   transform: scaleY(2);
 }
-
