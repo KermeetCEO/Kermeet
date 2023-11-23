@@ -10,26 +10,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
   sendButton.addEventListener('click', function() {
     var message = messageInput.value;
+    console.log(message);
+
     var phoneNumber = countryCodeSelect.value + phoneNumberInput.value;
     var url = 'https://web.whatsapp.com/send?phone=' + encodeURIComponent(phoneNumber) + '&text=' + encodeURIComponent(message) + '&type=phone_number&app_absent=0';
 
-    //Copy message to clipboard
-    copyToClipboard(message);
-
-    chrome.tabs.create({ url: url });
+    // Copy message to clipboard using the navigator.clipboard API
+    copyToClipboard(message).then(function() {
+      // Open a new tab with the WhatsApp URL
+      chrome.tabs.create({ url: url });
+    });
   });
+
+  function copyToClipboard(text) {
+    return navigator.clipboard.writeText(text);
+  }
 });
-
-
-function copyToClipboard (text) {
-  var tempTextArea = document.createElement('textarea');
-  tempTextArea.value = text;
-  document.body.appendChild(tempTextArea);
-
-  // Select and copy the text
-  tempTextArea.select();
-  document.execCommand('copy');
-
-  // Remove the temporary textarea
-  document.body.removeChild(tempTextArea);
-};
